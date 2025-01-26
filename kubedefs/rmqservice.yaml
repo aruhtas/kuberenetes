@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: vpromrmq01
 spec:
-
   ports:
-    - port: 5672
-      targetPort: vprormq-port
-      protocol: TCP
-    selector:
-      app: vprormq
+  - port: 5672
+    targetPort: vprormq-port
+    protocol: TCP
+  selector:
+    app: vprormq
   type: ClusterIP
